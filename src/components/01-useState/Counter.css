@@ -1,6 +1,7 @@
 body{
     padding: 5rem;
+    font-size: medium;
 }
 button{
-    margin-left: 1rem;
+    margin: 1rem;
 }
