@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import { useCounter } from '../../hooks/useCounter'
 import { useFetch } from '../../hooks/useFetch'
-import '../02-useEffect/effects.css'
+import './layout.css'
 
 
 export const Layout = () => {
@@ -9,29 +9,33 @@ export const Layout = () => {
 
     const {state, increment} = useCounter(1)
     
-    const {data, loading} = useFetch(`https://www.breakingbadapi.com/api/quotes/${state}`);
+    const {data} = useFetch(`https://www.breakingbadapi.com/api/quotes/${state}`);
 
-    const {author, quote} = !!data && data[0];
+    const {quote} = !!data && data[0];
 
-    console.log(author, quote)
+    const pTag = useRef()
+
+    useLayoutEffect(() => {
+        console.log(pTag.current.getBoundingClientRect())
+    }, [quote])
 
     return (
         <>
-            <h1>BreakingBad Quotes !!</h1>   
+            <h1>Layout effect !!</h1>   
             <hr/>
-            
+
             <figure className="blockquote text-end">
                 <blockquote className="mb-0">
-                    <p>
+                    <p
+                    className="mb-0"
+                    ref={pTag}
+                    >
                         {quote}
                     </p>
                 </blockquote>
-                <footer className="blockquote-footer">
-                    {author}
-                </footer>
             </figure>
 
-            <button className="btn btn-secondary m-5" onClick={increment}>
+            <button className="btn btn-secondary" onClick={increment}>
                 Siguiente frase
             </button>
 
