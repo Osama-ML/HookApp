@@ -9,8 +9,6 @@ export const MemoHook = () => {
     const [algo, setAlgo] = useState(true);
     const {state, increment} = useCounter(5000);
 
-    
-
     const memoProcesoPesado = useMemo(() => procesoPesado(state), [state])
 
     return (
