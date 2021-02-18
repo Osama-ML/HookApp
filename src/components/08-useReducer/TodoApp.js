@@ -1,5 +1,4 @@
 import React, { useEffect, useReducer } from 'react'
-import { useForm } from '../../hooks/useForm';
 import './styles.css';
 import { TodoAdd } from './TodoAdd';
 import { TodoList } from './TodoList';
@@ -37,27 +36,6 @@ export const TodoApp = () => {
             payload: todoId
         })
     }
-
-    // const handleSubmit = (e)=>{
-
-    //     e.preventDefault();
-
-    //     if(description.trim().length <= 1) return;
-
-    //     const newTodo = {
-    //         id: new Date().getTime(),
-    //         desc: description,
-    //         done: false
-    //     };
-
-    //     const action = {
-    //         type:'add',
-    //         payload: newTodo
-    //     }
-    //     dispatch(action);
-
-    //     reset();
-    // }
 
     const handleAddTodo = (newTodo) => {
 
