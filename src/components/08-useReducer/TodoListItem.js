@@ -4,9 +4,9 @@ import './styles.css';
 export const TodoListItem = ({todo, index, toggle, borrar}) => {
     return (
         <li
-            key={todo.id}
-            className="list-group-item"
-            >
+        key={todo.id}
+        className="list-group-item"
+        >
             <p 
             className={`${ todo.done && 'complete' }`}
             onClick={ () => toggle(todo.id) }
