@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 // estamos extrayendo la logica del contador en el custom hook
 
-export const useCounter = (initialState = 0) => {
+export const useCounter = (initialState = 10) => {
 
     
 
