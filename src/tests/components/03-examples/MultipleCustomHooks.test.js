@@ -9,13 +9,15 @@ jest.mock('../../../hooks/useCounter');
 
 describe('Pruebas en MultipleCustomHooks', () => {
 
-    useCounter.mockReturnValue({
-        state: 1,
-        increment: () => {}
-    });
+    
 
     test('debe de mostrarse correctamente', () => {
         
+        useCounter.mockReturnValue({
+            state: 1,
+            increment: () => {}
+        });
+
         useFetch.mockReturnValue({
             data: null,
             loading: true,
@@ -27,6 +29,12 @@ describe('Pruebas en MultipleCustomHooks', () => {
     })
 
     test('debe de mostar la informacion', () => {
+
+        useCounter.mockReturnValue({
+            state: 1,
+            increment: () => {}
+        });
+        
         useFetch.mockReturnValue({
             data: [{
                 author: 'Osama',
