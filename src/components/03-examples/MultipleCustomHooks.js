@@ -13,8 +13,6 @@ export const MultipleCustomHooks = () => {
 
     const {author, quote} = !!data && data[0];
 
-    console.log(author, quote)
-
     return (
         <>
             <h1>BreakingBad Quotes !!</h1>   
