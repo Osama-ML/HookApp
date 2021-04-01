@@ -11,7 +11,7 @@ describe('pruebas en RealExampleRef', () => {
         expect(wrapper.find('MultipleCustomHooks').exists()).toBe(false);
     })
 
-    test('debe de mostrar eñ componente <MultipleCustomHooks/>', () => {
+    test('debe de mostrar el componente <MultipleCustomHooks/>', () => {
 
         wrapper.find('button').simulate('click');
         expect(wrapper.find('MultipleCustomHooks').exists()).toBe(true);
