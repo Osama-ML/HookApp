@@ -20,4 +20,5 @@ export const AppRouter = () => {
       </div>
     </Router>
   );
+  
 };

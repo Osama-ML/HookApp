@@ -11,7 +11,7 @@ describe('Pruebas en HomeScreen', () => {
         email: 'osama@react.com'
     }
 
-    const wrapper = mount(
+    const wrapper = mount( // si usamos shallow solo se renderizaciía el primer componente, pero con mount renderiza todos los componentes
         <UserContext.Provider value={{user}}>
             <HomeScreen/>
         </UserContext.Provider>
